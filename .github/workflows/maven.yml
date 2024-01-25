@@ -38,7 +38,7 @@ jobs:
 
   analysis:
     needs: Build
-    name: analysis by Sorna
+    name: Analysis by Sorna
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
