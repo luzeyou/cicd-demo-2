@@ -15,7 +15,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  Build:
 
     runs-on: ubuntu-latest
 
@@ -37,7 +37,7 @@ jobs:
         path: target/cicd-demo-0.0.1-SNAPSHOT.jar
 
   analysis:
-    needs: build
+    needs: Build
     name: analysis by Sorna
     runs-on: ubuntu-latest
     steps:
@@ -88,4 +88,4 @@ jobs:
           environment_name: Cicd-demo-env
           version_label: ${{github.SHA}}
           region: ap-southeast-1
-          deployment_package: target/cicd-demo-0.0.1-SNAPSHOT.jar
+          deployment_package: cicd-demo-0.0.1-SNAPSHOT.jar
